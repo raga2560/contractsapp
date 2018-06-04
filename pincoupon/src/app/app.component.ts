@@ -31,9 +31,9 @@ export class MyApp {
       { title: 'Signup', component: SignupPage, icon: 'home' },
       { title: 'Login', component: LoginPage, icon: 'home' },
       { title: 'Divider', component: '' , icon: 'none' },
-      { title: 'VendorIssueServer', component: VendorIssuePage, icon: 'contact' },
+      { title: 'Vendor Create ', component: VendorIssuePage, icon: 'contact' },
       { title: 'Divider', component: '', icon: 'none' },
-      { title: 'Vendor Admin ', component: VendorAdminPage, icon: 'contact' },
+      { title: 'Vendor Management ', component: VendorAdminPage, icon: 'contact' },
       { title: 'Divider', component: '', icon: 'none' }
     ];
 
