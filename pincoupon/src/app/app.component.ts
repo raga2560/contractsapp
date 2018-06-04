@@ -3,23 +3,14 @@ import { Nav, Platform } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
+
 import { HomePage } from '../pages/home/home';
 import { ListPage } from '../pages/list/list';
-import { DroneLockPage } from '../pages/drone-lock/drone-lock';
-import { DroneExecutePage } from '../pages/drone-execute/drone-execute';
-import { FileUploadPage } from '../pages/file-upload/file-upload';
-import { CouponIssuePage } from '../pages/coupon-issue/coupon-issue';
-import { NoteCouponIssuePage } from '../pages/notecoupon-issue/notecoupon-issue';
-import { CouponRedeemPage } from '../pages/coupon-redeem/coupon-redeem';
-import { FranchiserPage } from '../pages/franchiser/franchiser';
-import { FranchiseePage } from '../pages/franchisee/franchisee';
-import { DealMakerPage } from '../pages/deal-maker/deal-maker';
-import { DealClientsPage } from '../pages/deal-clients/deal-clients';
-import { WalletRPage } from '../pages/wallet-r/wallet-r';
-import { WalletRadminPage } from '../pages/wallet-radmin/wallet-radmin';
-import { WalletSPage } from '../pages/wallet-s/wallet-s';
-import { WalletSadminPage } from '../pages/wallet-sadmin/wallet-sadmin';
-import { NoteCouponRedeemPage } from '../pages/notecoupon-redeem/notecoupon-redeem';
+import { VendorIssuePage } from '../pages/vendor-issue/vendor-issue';
+import { VendorAdminPage } from '../pages/vendor-admin/vendor-admin';
+import { LoginPage } from '../pages/login-page/login-page';
+import { SignupPage } from '../pages/signup-page/signup-page';
+
 
 @Component({
   templateUrl: 'app.html'
@@ -37,30 +28,13 @@ export class MyApp {
     // used for an example of ngFor and navigation
     this.pages = [
       { title: 'Home', component: HomePage, icon: 'home' },
-      { title: 'Fileupload', component: FileUploadPage, icon: 'contact' },
+      { title: 'Signup', component: SignupPage, icon: 'home' },
+      { title: 'Login', component: LoginPage, icon: 'home' },
       { title: 'Divider', component: '' , icon: 'none' },
-      { title: 'DroneLock', component: DroneLockPage, icon: 'contact' },
-      { title: 'DroneUnLock', component:DroneExecutePage , icon: 'contact' },
+      { title: 'VendorIssueServer', component: VendorIssuePage, icon: 'contact' },
       { title: 'Divider', component: '', icon: 'none' },
-      { title: 'CouponIssue', component: CouponIssuePage, icon: 'contact' },
-      { title: 'CouponRedeem', component: CouponRedeemPage, icon: 'contact' },
-      { title: 'Divider', component: '', icon: 'none' },
-      { title: 'NoteCouponIssue', component: NoteCouponIssuePage, icon: 'contact' },
-      { title: 'NoteCouponRedeem', component: NoteCouponRedeemPage, icon: 'contact' },
-      { title: 'Divider', component: '', icon: 'none' },
-      { title: 'Wallet Regular', component: WalletRPage, icon: 'contact' },
-      { title: 'Wallet Admin Regular', component: WalletRadminPage, icon: 'contact' },
-      { title: 'Divider', component: '', icon: 'none' },
-      { title: 'Wallet AML', component: WalletSPage, icon: 'contact' },
-      { title: 'Wallet Admin AML', component: WalletSadminPage, icon: 'contact' },
-      { title: 'Divider', component: '', icon: 'none' },
-      { title: 'Franchiser ', component: FranchiserPage, icon: 'contact' },
-      { title: 'Franchisee ', component: FranchiseePage, icon: 'contact' },
-      { title: 'Divider', component: '', icon: 'none' },
-      { title: 'DealMaker ', component: DealMakerPage, icon: 'contact' },
-      { title: 'DealClients ', component: DealClientsPage, icon: 'contact' },
-      { title: 'Divider', component: '', icon: 'none' },
-      { title: 'List', component: ListPage, icon: 'contact' }
+      { title: 'Vendor Admin ', component: VendorAdminPage, icon: 'contact' },
+      { title: 'Divider', component: '', icon: 'none' }
     ];
 
   }

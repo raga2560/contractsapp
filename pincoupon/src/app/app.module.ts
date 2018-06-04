@@ -1,71 +1,54 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { ErrorHandler, NgModule } from '@angular/core';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
+import { HttpModule } from '@angular/http';
 
 import { MyApp } from './app.component';
 import { HomePageModule } from '../pages/home/home.module';
 import { ListPageModule } from '../pages/list/list.module';
+import { IonicStorageModule } from '@ionic/storage';
+import { LoginPage } from '../pages/login-page/login-page';
+import { SignupPage } from '../pages/signup-page/signup-page';
+import { Todos } from '../providers/todos';
+import { Auth } from '../providers/auth';
+
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
-import { FileUploadPageModule } from '../pages/file-upload/file-upload.module';
-import { DroneLockPageModule } from '../pages/drone-lock/drone-lock.module';
-import { DroneExecutePageModule } from '../pages/drone-execute/drone-execute.module';
-import { CouponIssuePageModule } from '../pages/coupon-issue/coupon-issue.module';
-import { CouponRedeemPageModule } from '../pages/coupon-redeem/coupon-redeem.module';
-import { NoteCouponIssuePageModule } from '../pages/notecoupon-issue/notecoupon-issue.module';
-import { NoteCouponRedeemPageModule } from '../pages/notecoupon-redeem/notecoupon-redeem.module';
-import { DealMakerPageModule } from '../pages/deal-maker/deal-maker.module';
-import { DealClientsPageModule } from '../pages/deal-clients/deal-clients.module';
-import { FranchiserPageModule } from '../pages/franchiser/franchiser.module';
-import { FranchiseePageModule } from '../pages/franchisee/franchisee.module';
-import { WalletRPageModule } from '../pages/wallet-r/wallet-r.module';
-import { WalletSPageModule } from '../pages/wallet-s/wallet-s.module';
-import { WalletRadminPageModule } from '../pages/wallet-radmin/wallet-radmin.module';
-import { WalletSadminPageModule } from '../pages/wallet-sadmin/wallet-sadmin.module';
-//import { FileSelectDirective, FileDropDirective } from 'ng2-file-upload';
+import { VendorIssuePageModule } from '../pages/vendor-issue/vendor-issue.module';
+import { VendorAdminPageModule } from '../pages/vendor-admin/vendor-admin.module';
 
 
 @NgModule({
   declarations: [
     MyApp,
-//    HomePage,
-//   FileUploadPage,
-//    FileSelectDirective
-//    ListPage
+    LoginPage, 
+    SignupPage
+
   ],
   imports: [
     BrowserModule,
+    HttpModule,
     HomePageModule,
     ListPageModule,
-    FileUploadPageModule,
-    DealMakerPageModule,
-    DealClientsPageModule,
-    FranchiserPageModule,
-    FranchiseePageModule,
-    DroneLockPageModule,
-    CouponIssuePageModule,
-    CouponRedeemPageModule,
-    NoteCouponIssuePageModule,
-    NoteCouponRedeemPageModule,
-    DroneExecutePageModule,
-    WalletRPageModule,
-    WalletRadminPageModule,
-    WalletSPageModule,
-    WalletSadminPageModule,
+    VendorIssuePageModule,
+    VendorAdminPageModule,
     IonicModule.forRoot(MyApp),
+    IonicStorageModule.forRoot()
   ],
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-//    HomePage
-//    FileUploadPage,
-//    ListPage
+    LoginPage, 
+    SignupPage
+
   ],
   providers: [
     StatusBar,
     SplashScreen,
+    Todos, 
+    Auth,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })
