@@ -11,6 +11,7 @@ import { LoginPage } from '../pages/login-page/login-page';
 import { SignupPage } from '../pages/signup-page/signup-page';
 import { Todos } from '../providers/todos';
 import { Vendor } from '../providers/vendor';
+import { Relation } from '../providers/relation';
 import { Auth } from '../providers/auth';
 
 
@@ -52,6 +53,7 @@ import { VendorAdminPageModule } from '../pages/vendor-admin/vendor-admin.module
     SplashScreen,
     Todos, 
     Vendor, 
+    Relation,
     Auth,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
