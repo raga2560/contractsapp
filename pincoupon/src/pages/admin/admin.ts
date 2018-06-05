@@ -15,11 +15,17 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class AdminPage {
 
+  vendor: any;
   constructor(public navCtrl: NavController, public navParams: NavParams) {
+     this.vendor = this.navParams.data.vendor;
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad AdminPage');
+  }
+  
+  selectVendor() {
+    this.navCtrl.push('VendorsPage' );
   }
 
 }

@@ -22,11 +22,10 @@
         </ion-item>
         <ion-item>
             <ion-input type="text" placeholder="Vendor id"></ion-input>
-            <button item-right ion-button color="primary">Create vendor id</button>
+            <ion-input item-right type="number" placeholder="Vendor PIN "></ion-input>
         </ion-item>
         <ion-item>
-            <ion-input type="number" placeholder="Vendor PIN "></ion-input>
-            <button item-right ion-button color="primary">Create vendor PIN</button>
+            <button item-right ion-button color="primary">Generate vendor id/PIN</button>
         </ion-item>
         <ion-item>
             <ion-input type="text" placeholder="Contractor Income address"></ion-input>
@@ -43,13 +42,13 @@
             <button clear item-right ion-button>Validate Vendor name </button>
         </ion-item>
         <ion-item>
-            <button item-left ion-button>Create Vendor </button>
+            <button item-left ion-button (click)="vendorCreate()">Create Vendor </button>
         </ion-item>
         <ion-item>
             <a item-left ion-button  href="">Download vendor data </a>
         </ion-item>
         <ion-item>
-            <button item-left ion-button>Activate vendor </button>
+            <button item-left ion-button (click)="activateVendor()">Activate vendor </button>
         </ion-item>
    </ion-list>
 

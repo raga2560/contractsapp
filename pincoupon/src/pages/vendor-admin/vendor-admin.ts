@@ -15,9 +15,9 @@ import { IonicPage, NavController } from 'ionic-angular';
 })
 export class VendorAdminPage {
 
-  usersRoot = 'UsersPage'   // 
+  vendorsRoot = 'VendorsPage'   // 
   adminRoot = 'AdminPage'
-  transactionsRoot = 'TransactionsPage'
+  relationsRoot = 'RelationsPage'
   balancesRoot = 'BalancesPage'
 
 

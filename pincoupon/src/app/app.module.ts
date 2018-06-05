@@ -10,12 +10,14 @@ import { IonicStorageModule } from '@ionic/storage';
 import { LoginPage } from '../pages/login-page/login-page';
 import { SignupPage } from '../pages/signup-page/signup-page';
 import { Todos } from '../providers/todos';
+import { Vendor } from '../providers/vendor';
 import { Auth } from '../providers/auth';
 
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
+import { VendorsPageModule } from '../pages/vendors/vendors.module';
 import { VendorIssuePageModule } from '../pages/vendor-issue/vendor-issue.module';
 import { VendorAdminPageModule } from '../pages/vendor-admin/vendor-admin.module';
 
@@ -32,6 +34,7 @@ import { VendorAdminPageModule } from '../pages/vendor-admin/vendor-admin.module
     HttpModule,
     HomePageModule,
     ListPageModule,
+    VendorsPageModule,
     VendorIssuePageModule,
     VendorAdminPageModule,
     IonicModule.forRoot(MyApp),
@@ -48,6 +51,7 @@ import { VendorAdminPageModule } from '../pages/vendor-admin/vendor-admin.module
     StatusBar,
     SplashScreen,
     Todos, 
+    Vendor, 
     Auth,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]

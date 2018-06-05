@@ -18,10 +18,11 @@
   <ion-list  inset padding>
         <ion-item>
             <p> Administer vendor . </p>
-            <ion-input type="text" placeholder="Vendor id"></ion-input>
+            <ion-input type="text" placeholder="Vendor id" ></ion-input> {{vendor.id}}
+            <button item-right ion-button color="primary"(click)="selectVendor()">Select vendor</button>
         </ion-item>
         <ion-item>
-            <button item-left ion-button color="primary">Pause vendor</button>
+            <button item-left ion-button color="primary" (click)="addTodo()" >Pause vendor</button>
             <button item-right ion-button color="primary">Activate vendor</button>
         </ion-item>
         <ion-item>
