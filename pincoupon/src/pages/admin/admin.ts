@@ -1,5 +1,8 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, LoadingController } from 'ionic-angular';
+import { Vendor } from '../../providers/vendor';
+
+
 
 /**
  * Generated class for the AdminPage page.
@@ -16,10 +19,32 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 export class AdminPage {
 
   vendor: any;
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+
+ constructor(public navCtrl: NavController, public vendorService: Vendor,
+              public loadingCtrl: LoadingController,
+              public navParams: NavParams) {
      this.vendor = this.navParams.data.vendor;
   }
 
+  ionViewDidLoad() {
+    console.log('ionViewDidLoad CouponIssuePage');
+  }
+
+  showLoader(){
+
+    this.loading = this.loadingCtrl.create({
+      content: 'Working...'
+    });
+
+    this.loading.present();
+
+  }
+
+
+
+
+
+   
   ionViewDidLoad() {
     console.log('ionViewDidLoad AdminPage');
   }
@@ -27,5 +52,64 @@ export class AdminPage {
   selectVendor() {
     this.navCtrl.push('VendorsPage' );
   }
+  showRelations() {
+    this.navCtrl.push('RelationPage' );
+  }
+
+  activateVendor(vendor){
+
+    this.showLoader();
+
+    var pauseactivate = {
+        activate : true,
+        pause: false,
+        vendorid : 1
+    };
+
+    this.vendorService.vendorPauseActivate(pauseactivate).then((result) => {
+
+      this.loading.dismiss();
+
+      //Remove locally
+                let index = this.vendors.indexOf(vendor);
+
+                if(index > -1){
+                        this.vendors.splice(index, 1);
+                }
+
+    }, (err) => {
+      this.loading.dismiss();
+        console.log("not allowed");
+    });
+  }
+  
+  pauseVendor(vendor){
+
+    this.showLoader();
+
+    var pauseactivate = {
+        activate : false,
+        pause: true,
+        vendorid : 1
+    };
+
+    this.vendorService.vendorPauseActivate(pauseactivate).then((result) => {
+
+      this.loading.dismiss();
+
+      //Remove locally
+                let index = this.vendors.indexOf(vendor);
+
+                if(index > -1){
+                        this.vendors.splice(index, 1);
+                }
+
+    }, (err) => {
+      this.loading.dismiss();
+        console.log("not allowed");
+    });
+  }
+
+
 
 }

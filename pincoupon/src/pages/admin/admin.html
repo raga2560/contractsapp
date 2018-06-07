@@ -22,11 +22,11 @@
             <button item-right ion-button color="primary"(click)="selectVendor()">Select vendor</button>
         </ion-item>
         <ion-item>
-            <button item-left ion-button color="primary" (click)="addTodo()" >Pause vendor</button>
-            <button item-right ion-button color="primary">Activate vendor</button>
+            <button item-left ion-button color="primary" (click)="pauseVendor()" >Pause vendor</button>
+            <button item-right ion-button color="primary" (click)="activateVendor()">Activate vendor</button>
         </ion-item>
         <ion-item>
-            <button item-left ion-button color="primary">Vendor plans</button>
+            <button item-left ion-button color="primary" (click)="showRelations()">Vendor plans</button>
             <button item-right ion-button color="primary">Vendor balances</button>
         </ion-item>
    </ion-list>

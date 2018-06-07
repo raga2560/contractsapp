@@ -34,7 +34,16 @@ export class RelationsPage {
     });
 
   }
-  
+
+  refresh () {
+
+    this.relationService.getRelations().then((data) => {
+                  this.relations = data;
+    }, (err) => {
+        console.log("not allowed");
+    });
+
+  }  
   showLoader(){
 
     this.loading = this.loadingCtrl.create({
