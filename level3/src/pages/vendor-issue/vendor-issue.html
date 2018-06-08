@@ -40,20 +40,10 @@
                     <ion-input [(ngModel)]="phone" placeholder="Phone" type="phone"></ion-input>
         </ion-item>
         <ion-item>
-                    <ion-label>Contract type</ion-label>
-                    <ion-select [(ngModel)]="contracttype">
-                        <ion-option value="trial"> Trial contract </ion-option>
-                        <ion-option value="beta"> Beta contract </ion-option>
-                        <ion-option value="flat"> Flat fees contract </ion-option>
-                        <ion-option value="percentage"> Percentage fees contract</ion-option>
-                        <ion-option value="mixed"> Mixed fees contract</ion-option>
-                    </ion-select>
-        </ion-item>
-        <ion-item>
                     <ion-label>Vendor type</ion-label>
                     <ion-select [(ngModel)]="vendortype">
                         <ion-option value="bitcoincoupon">Bitcoin Coupon vendor</ion-option>
-                        <ion-option value="fiatcoupon">Fiat Coupon vendor</ion-option>
+                        <ion-option value="fialcoupon">Fiat Coupon vendor</ion-option>
                         <ion-option value="notionalcoupon">Notional Coupon vendor</ion-option>
                     </ion-select>
         </ion-item>
@@ -86,8 +76,7 @@
         <ion-item>
         </ion-item>
         <ion-item>
-            <a item-left ion-button  href="vendor.vendorfilename" download>Download vendor data </a>
-                    <ion-label><ion-icon name="download"></ion-icon></ion-label>
+            <a item-left ion-button  href="">Download vendor data </a>
         </ion-item>
         <ion-item>
             <button item-left ion-button (click)="activateVendor()">Activate vendor </button>
